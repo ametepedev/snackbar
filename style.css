@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Variables*/
+
+:root{
+    --color-primary: #7abcf3;
+    --color-primary-two: #7a5eff;
+    --color-background: #333;
+    --color-danger: #d62222;
+    --color-warning: #ffff00;
+    --color-info: #10b5f7;
+    --color-success: #1fb31f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+}
+
+html,body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Poppins, sans-serif;
+    background: var(--color-background);
+    
+}
+.btn{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.snackbar-btn{
+    border: 0;
+    padding: 10px;
+    border-radius: 8px;
+    background: var(--color-primary);
+    color: #fff;
+    
+}
+.snackbar-btn:hover{
+    background: var(--color-primary-two);
+}
+
+
+#snackbar{
+    visibility: hidden;
+    min-width: 250px;/*largeur minimale*/
+    background: var(--color-primary);/*couleur de fond*/
+    text-align: center; /*texte centré*/
+    color: #fff;/*couleur de texte*/
+    border-radius: 8px;/*bordures arrondies de 8px*/
+    position: fixed;/*position du snackbar*/
+    bottom: 30px;/*marge de 30px a partir du bas*/
+    left: 50%;
+    margin-left: -125px;/*diviser la valeur de min-width par 2*/
+    z-index: 1;/*toujours visible*/
+    padding: 16px;/* ajouter un padding de 16px des 4 cotes*/
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;/*ajouter une animation: 0.5 s pour faire apparaitre et disparaitre le snackbar. cependant, retardez le processus de fondu de 2.5s*/
+}
+
+#snackbar.visible{
+    visibility: visible;
+}
+
+/*Ajout d'une animation*/
+@keyframes fadein{
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout{
+    from{
+        bottom: 30px;
+        opacity: 1;
+    }
+    to{
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadein{
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout{
+    from{
+        bottom: 30px;
+        opacity: 1;
+    }
+    to{
+        bottom: 0;
+        opacity: 0;
+    }
+}

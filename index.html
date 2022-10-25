@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNACKBAR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <!--Boutton pour faire apparaitre le snackbar-->
+    <div class="btn">
+        <button type="button" class="snackbar-btn" onclick="snackbarFunc('var(--color-success)','Utilisateur connecté');">Click Me !</button>
+
+        <button type="button" class="snackbar-btn" onclick="snackbarFunc('var(--color-danger)','Utilisateur connecté');">Click Me !</button>
+
+        <button type="button" class="snackbar-btn" onclick="snackbarFunc('var(--color-warning)','Utilisateur connecté');">Click Me !</button>
+
+        <button type="button" class="snackbar-btn" onclick="snackbarFunc('var(--color-info)','Utilisateur connecté');">Click Me !</button>
+    </div>
+
+    <div id="snackbar" class=""></div>
+</body>
+</html>
